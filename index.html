@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <style>
+      html {
+        font-family: 'helvetica neue';
+      }
+      li {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+<ul>
+  <li>item1</li>
+  <li>item2</li>
+  <li>item3</li>
+  <li>item4</li>
+  <li>item5</li>
+</ul>
+
+<script>
+  var list = document.querySelector('ul')
+  list.addEventListener('click', function(event){
+    console.log(event);
+    event.target.style.textDecoration = 'line-through';
+    event.target.remove();
+  });
+</script>
+  </body>
+</html>
